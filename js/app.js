@@ -1,7 +1,6 @@
 // function on adding extra cost 
 function addExtraCost(product, cost) {
     const extraCost = document.getElementById(product + '-price')
-
     extraCost.innerText = cost
 }
 
@@ -11,6 +10,7 @@ function getExtraPrice(product) {
     return productCostAmount
 }
 
+// all total price  
 function updateTotal() {
     const bestPrice = getExtraPrice('best');
     const memoryPrice = getExtraPrice("memory")
@@ -29,7 +29,7 @@ function updateTotal() {
 
 
 
-
+// memory event listener 
 const memory8bg = document.getElementById("memory-8gb");
 memory8bg.addEventListener("click", function () {
     addExtraCost('memory', 0)
@@ -60,6 +60,8 @@ storage1Tb.addEventListener("click", function () {
     updateTotal()
 })
 
+// delivery event listern 
+
 const deliveryFree = document.getElementById("delivery-free");
 deliveryFree.addEventListener("click", function () {
     addExtraCost("delevery", 0)
@@ -85,11 +87,13 @@ document.getElementById('apply-btn').addEventListener('click', function () {
     const total = document.getElementById('totalPirce2');
     total.innerText = totalPrice
     const promoCode = document.getElementById('input-promo-code');
+    const applyBtn = document.getElementById('apply-btn')
     const cupon = promoCode.value;
     if (cupon.toLowerCase() == 'stevekaku') {
         const discount = totalPrice * 20 / 100;
         const priceAfterDiscount = totalPrice - discount;
         total.innerText = priceAfterDiscount;
+        applyBtn.setAttribute("disabled", true);
     }
     else {
         total.innerText = totalPrice;
