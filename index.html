@@ -29,20 +29,22 @@
 
                         <div class="main-memory my-4">
                             <h6 class="fw-bold">Memory</h6>
-                            <button class="btn btn-outline-dark btn-sm">8BG unified memory</button>
-                            <button class="btn btn-outline-dark btn-sm">16BG unified memory</button>
+                            <button class="btn btn-outline-dark btn-sm" id="memory-8gb">8BG unified memory</button>
+                            <button class="btn btn-outline-dark btn-sm" id="memory-16gb">16BG unified memory</button>
                         </div>
 
                         <div class="main-storage my-4">
                             <h6 class="fw-bold">Storage</h6>
-                            <button class="btn btn-outline-dark btn-sm">256 SSD storage</button>
-                            <button class="btn btn-outline-dark btn-sm">512 SSD storage</button>
-                            <button class="btn btn-outline-dark btn-sm">1TB SSD storage</button>
+                            <button class="btn btn-outline-dark btn-sm" id="storage-256gb">256 SSD storage</button>
+                            <button class="btn btn-outline-dark btn-sm" id="storage-512gb">512 SSD storage</button>
+                            <button class="btn btn-outline-dark btn-sm" id="storage-1TB">1TB SSD storage</button>
                         </div>
                         <div class="main-delivery my-4">
                             <h6 class="fw-bold">Choose your delivery option</h6>
-                            <button class="btn btn-outline-dark btn-sm">Friday, Aug 25 FREE Prime Delivery</button>
-                            <button class="btn btn-outline-dark btn-sm">Friday, Aug 21 Delivery charge $20</button>
+                            <button class="btn btn-outline-dark btn-sm" id="delivery-free">Friday, Aug 25 FREE Prime
+                                Delivery</button>
+                            <button class="btn btn-outline-dark btn-sm" id="delivery-20">Friday, Aug 21 Delivery charge
+                                $20</button>
                         </div>
                     </main>
                     <div class="price-table">
@@ -50,35 +52,36 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Best Price</th>
-                                    <th scope="col">$1299</th>
+                                    <th scope="col">$ <span id="best-price">1299</span> </th>
 
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th>Extra Memory Cost</th>
-                                    <th id="memory-cost">$0</th>
+                                    <th>$ <span id="memory-price">0</span> </th>
 
                                 </tr>
                                 <tr>
                                     <th>Extra Storage Cost</th>
-                                    <th>$0</th>
+                                    <th>$ <span id="storage-price">0</span> </th>
 
                                 </tr>
                                 <tr style="border-bottom: 2px solid rgb(32, 29, 29);">
                                     <th>Delivery Charge</th>
-                                    <th>$0</th>
+                                    <th>$ <span id="delevery-price">0</span> </th>
                                 </tr>
                                 <tr>
                                     <th>Total Price</th>
-                                    <th>$1299</th>
+                                    <th>$ <span id="total-pirce">1299</span> </th>
                                 </tr>
                                 <tr class="d-flex">
                                     <th>Promo code</th>
-                                    <td><input type="text" class="form-control">
+                                    <td><input type="text" class="form-control" id="input-promo-code">
 
                                     </td>
-                                    <td><button type="button" class="btn btn-danger btn-md">apply</button></td>
+                                    <td><button type="button" class="btn btn-danger btn-md"
+                                            id="apply-btn">apply</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -87,7 +90,7 @@
             </div>
             <hr>
             <div class="text-center">
-                <h1>Total: $1299</h1>
+                <h1>Total: $<span id="totalPirce2">1299</span></h1>
             </div>
         </div>
         <script src="js/app.js"></script>
